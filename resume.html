@@ -1,9 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Resume</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jingshu Portfolio Home</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+	<link href="https://fonts.googleapis.com/css?family=Acme|Lato|Chewy" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/mdb.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-	<iframe src="CVJingshuZhao.pdf" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<header>
+		<nav class="navigation">
+			<a class="navbrand" href="https://www.google.com/"><img src="image/brand.png" alt="return to Jingshu's homepage"></a>
+			<div class="container">
+				<ul class="topnav" id="myTopnav">
+  					<li><a href="index.html">Home</a></li>
+  					<li><a href="work.html">Work</a></li>
+  					<li><a href="about.html">About</a></li>
+ 					<li class="active-page"><a href="resume.html">Resume</a></li>
+  					<li class="icon">
+    					<a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">&#x2630</a>
+  					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<section class="resume">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-lg-12">
+					<iframe src="CVJingshuZhao.pdf" style="border: 0" width="800" height="1200" frameborder="0" scrolling="no"></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+	<div class="container">
+		<div class="col-xs-12 col-md-12">
+			<p>2016&nbsp&copy&nbspJINGSHU&nbspZHAO. ALL RIGHTS RESERVED.</p>
+		</div>
+	</div>
+	</footer>
+	<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+	</script>
 </body>
 </html>

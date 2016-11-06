@@ -12,7 +12,7 @@
 <body class="active" id="home">
 	<header>
 		<nav class="navigation">
-			<a class="navbrand" href="https://www.google.com/"><img src="image/brand.png" alt="return to Jingshu's homepage"></a>
+			<a class="navbrand" href="index.html"><img src="image/brand.png" alt="return to homepage"></a>
 			<div class="container">
 				<ul class="topnav" id="myTopnav">
   					<li><a href="index.html">Home</a></li>
@@ -49,21 +49,23 @@
 						<ul>
 							<li><strong>University of Michigan, School of Information 2016 ~ 2018</strong>
 								<ol>
-									<li>Master of Science in Information</li></br>
+									<li>Master of Science in Information</li><br/>
 									<li>Specialization: Human-Computer Interaction</li>
-									<li>Courses: Introduction to Interaction Design, Contextual Inquiry, Fundamentals of Human Behavior</li>
+									<li>Courses: Introduction to Interaction Design, Contextual Inquiry, Human Behavior</li>
 								</ol>
 							</li>
 							<li><strong>Communication University of China, School of Television 2012 ~ 2014</strong>
 								<ol>
-									<li>Master of Arts</li></br>
+									<li>Master of Arts</li><br/>
 									<li>Specialization: International Journalism</li><br/>
+									<li>Study Abroad: Center De Formation Du Journalism July,2013 ~ August 2013</li>
 								</ol>
 							</li>
 							<li><strong>China Foreign Affairs University 2008 ~ 2012</strong>
 								<ol>
-									<li>Major: Japanese</li></br>
-									<li>Study Abroad: Chubu University, Japan</li>
+									<li>Bachelor of Arts</li><br/>
+									<li>Major: Japanese</li><br/>
+									<li>Study Abroad: Chubu University, Japan 2010~2011</li>
 								</ol>
 							</li>
 						</ul>
@@ -90,4 +92,19 @@
 			</div>
 		</div>
 	</footer>
+	<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+  	<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+	</script>
 </body>

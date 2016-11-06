@@ -245,10 +245,12 @@ li.active-page{
 	font-size:1.3em;
 }
 .introcontainer{margin-top:80px;height:50%;}
-.introcontainer .col-xs-10, .introcontainer.col-lg-10{
-	margin-left:8%;
-	margin-right:10%;
+.introcontainer .col-xs-12, .introcontainer.col-lg-12{
+	margin-left:5%;
+	margin-right:5%;
 	display:block;
+	line-height: 2;
+	font-family:"Lato",cursive;
 }
 .edcontainer{margin-bottom:20%; margin-top:10%;height:435px;}
 .popover{
@@ -313,9 +315,23 @@ padding-right:5%;}
 margin-top:10%;
 }
 @media (max-width:992px){
-	.edcontainer {margin-top:5%;}
+	.edcontainer {margin-top:5%;margin-bottom:65%;}
 	.aboutcontainer h1{text-align:center;}
 }
 .aboutcontainer, .edcontainer{font-family:'Lato',cursive;line-height:1.5;}
 .edcontainer h2{font-family:'Lato',cursive;}
 .edcontainer .col-lg-4{float:right; right:0;}
+
+iframe{
+	margin:auto;
+	width:100%;
+	height:1200px;
+}
+.resume .container{
+	margin-top:10%;
+	margin-bottom:20%;
+}
+.resume .col-lg-12, .resume .col-xs-12{
+	padding-left:5%;
+	padding-right:5%;
+}
