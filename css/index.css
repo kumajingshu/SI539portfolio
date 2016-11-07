@@ -141,6 +141,7 @@ padding-right:5%;}
 }
 */
 .skillcontainer .container{
+	max-width:1200px;
 	width:100%;
 	height:100%;
 	background-color:#FEF8EA;
@@ -148,6 +149,7 @@ padding-right:5%;}
 	padding-right:10%;
 	padding-bottom:10%;
 }
+.skillcontainer{width:100%;background-color:#FEF8EA;}
 .Aboutme{
 	display:block;
 	margin:0;
@@ -184,6 +186,8 @@ footer{
 	height:60px;
 	position:relative;
 	bottom:0;
+	left:0;
+	right:0;
 }
 
 @media (min-width: 992px){
@@ -206,8 +210,7 @@ footer{
     font-weight:500;
     text-align:center;
     display:block;
-	width:100%;
-	line-height:3;
+	line-height:1;
 }
 .white-text-title {
     color: #FFFFFF !important;
@@ -301,22 +304,12 @@ padding-right:5%;}
 	padding-right:5%;
 }
 
-.intro{
-	display:block;
-	margin-left:5%;
-	margin-right:5%;
-	position:absolute;
-	padding-top:0;
-	margin-top:0;
-	right:0;
-}
-
 .aboutcontainer img{
 	display:block;
 	margin:0 auto;
 }
 .edcontainer{
-	height:40%;
+	height:50%;
 	padding-left:5%;
 	padding-right:5%;
 	margin-top:5%;
@@ -330,22 +323,38 @@ font-family:'Lato', sans-serif;
 font-size: 1em;
 line-height: 1.5em;
 }
+.education{width:80%;}
 @media (max-width:998px){
-	.edcontainer{width:90%;}
-	.aboutcontainer{width:90%;margin-top:100px;height:450px;}
+	.edcontainer{width:90%;margin-top:0;}
+	.aboutcontainer{width:90%;margin-top:100px;}
 	.aboutcontainer h1{text-align:center;}
-	.aboutcontainer img{width:80%;}
+	.aboutcontainer img{width:50%;}
 }
-
+@media (max-width:768px){
+	iframe{
+		width:80%;
+		display:block;
+		max-height:600px;
+		margin-left:0;
+		margin-right:0;
+		margin-bottom:20%;
+	}
+}
+@media(max-width:360px){
+	.white-text-title2, .white-text-description2 {line-height:1.5;
+	}
+}
+iframe{
+	margin-top:100px;
+	margin-left:10%;
+	margin-right:10%;
+	margin-bottom:10%;
+}
 .aboutcontainer, .edcontainer{font-family:'Lato',cursive;line-height:1.5;}
 .edcontainer h2{font-family:'Lato',cursive;}
 .edcontainer .col-lg-4{float:right; right:0;}
 
-iframe{
-	margin-left:10%;
-	margin-right:10%;
-	width:80%;
-}
+
 
 .resume .container{
 	margin-top:20%;
