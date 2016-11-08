@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<style>
+ul.topnav li a.active {
+	color:red;
+}
+</style>
 	<title>Jingshu Portfolio Home</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Acme|Lato|Chewy|Satisfy" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-	<header class="navigation">
-		<nav class="container">
-			<ul class="topnav" id="myTopnav">
-  				<li><a href="#home">Home</a></li>
-  				<li><a href="#news">News</a></li>
-  				<li><a href="#contact">Contact</a></li>
- 				<li><a href="#about">About</a></li>
-  				<li class="icon">
-    				<a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
-  				</li>
-			</ul>
+	<header>
+		<nav class="navigation">
+			<div class="navbrand">
+				<a href="https://www.google.com">
+					<img src="image/brand.png">
+				</a>
+			</div>
+			<div class="container">
+				<ul class="topnav" id="myTopnav">
+  					<li class="page-scroll"><a href="#home">Home</a></li>
+  					<li class="page-scroll"><a href="#work">Work</a></li>
+  					<li class="page-scroll"><a href="#about">About</a></li>
+ 					<li class="page-scroll"><a href="">Resume</a></li>
+  					<li class="icon">
+    					<a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+  					</li>
+				</ul>
+			</div>
 		</nav>
 	</header>
-	<section class="jumbotron">
+	<section class="jumbotron" id="home">
 			<h1>Hello, I am Jingshu!</h1>
 			<h2>A passionate UX designer</h2>
-	</section>
-	<section class="workcontainer">
+	</section> 
+	<section class="workcontainer" id="work">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-4">
@@ -61,7 +79,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="skillcontainer">
+	<section class="skillcontainer" id="about">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-12">
@@ -99,10 +117,12 @@
 <footer>
 	<div class="container">
 		<div class="col-ex-12 col-md-12">
-			<p>2016&nbsp&copy&nbspJINGSHU&nbspZHAO. ALL RIGHTS RESERVED.</p>
+			<p>2016&nbsp&copy&nbspJINGSHU&nbspZHAO.&nbsp&nbspALL&nbspRIGHTS&nbspRESERVED.</p>
 		</div>
 	</div>
 </footer>
+
+
 <script>
 function myFunction() {
     var x = document.getElementById("myTopnav");
@@ -112,6 +132,32 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+   // jQuery for page scrolling feature - requires jQuery Easing plugin
+$('.page-scroll a').bind('click', function(event) {
+	$('.page-scroll a' ).removeClass('active');
+
+	$(this).addClass('active');
+
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+        scrollTop: ($($anchor.attr('href')).offset().top - 50)
+    }, 1250, 'easeInOutExpo');
+    event.preventDefault();
+
+
+});
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if(scroll >= 500) {
+        $(".header").addClass(".active");
+    } else {
+        $(".header").removeClass(".active");
+    }
+});
+
+
 </script>
 </body>
 </html>
